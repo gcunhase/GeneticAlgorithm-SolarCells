@@ -22,6 +22,6 @@ Run `Evo_alg_ZnO_and_MoOx_optical_spacer_20190404.m`
 ## Results
 
 ## Acknowledgement
-Co-First Authors: Premkumar Vincent and Gwenaelle Cunha Sergio had equal contribution
+Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
 Include citation once available
