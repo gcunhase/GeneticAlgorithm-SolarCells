@@ -1,16 +1,18 @@
 ## About
-Solar cell thickness optimization through genetic algorithm
+* Solar cell thickness optimization through genetic algorithm
+* Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 ## Contents
-| [Genetic Algorithm](#main-function) | [Results](#results) |
+[Genetic Algorithm](#main-function) • [Results](#results)
 
 ## Dependencies
-* Tested with Matlab 2018b
-* Communication System Toolbox: *de2bi* and *bi2de* functions
+* *de2bi* and *bi2de* functions:
+    * Communication System Toolbox (Matlab 2018b)
+    * Communications Toolbox (Matlab 2019a)
+    * Add-Ons > Get Add-Ons
 
 ## How to Use
-### Main function
-Run `Evo_alg_ZnO_and_MoOx_optical_spacer_20190404.m`
+Run `main.m`
 > EXPLAIN MORE WHAT IT DOES
 
 ## Results
