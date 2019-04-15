@@ -4,15 +4,69 @@ clc;
 
 format longG;
 
-temp_count = 0;
-overall_success_rate = zeros(1400,1);
-sd_simulation = zeros(1400,1);
-mean_simulation = zeros(1400,1);
+%% Initializing xlsx file name
+filename = 'RESULTS_OUTPUT.xlsx';
+temp=1;
+while(true)
+    if(isfile(filename))
+        filename = strtok(filename,'.');
+        filename=filename + string(temp+1) + ".xlsx";
+    else
+        break;
+    end
+end
+
+%% GUI for obtaining the number of runs per selection method
+prompt = {'Breeder:','Tournament:', 'Roulette:', 'Random:'};
+dlgtitle = 'Enter the number of runs. Please enter whole integers.';
+answer = inputdlg(prompt,dlgtitle); % Obtain the number of repetitive runs required per selection method
+answer = cell2mat(answer);
+answer = str2num(answer);
+answer = round(answer');
+total_repetitive_runs = sum(answer);    % Total number of repeat runs
+
+selection_mat = strings([1,total_repetitive_runs]);
+xls_sheet_mat = strings([1,total_repetitive_runs]);
+zz_temp = 0;
+zz=0;
+for zz = 1:1:answer(1,1)
+    selection_mat(1,zz_temp+zz) = "breeder";
+    xls_sheet_mat(1,zz_temp+zz) = "breeder"+zz;
+end
+if(~(isempty(zz)))
+    zz_temp = zz_temp+zz;
+end
+for zz = 1:1:answer(1,2)
+    selection_mat(1,zz_temp+zz) = "tournament";
+    xls_sheet_mat(1,zz_temp+zz) = "tournament"+zz;
+end
+if(~(isempty(zz)))
+    zz_temp = zz_temp+zz;
+end
+for zz = 1:1:answer(1,3)
+    selection_mat(1,zz_temp+zz) = "roulette";
+    xls_sheet_mat(1,zz_temp+zz) = "roulette"+zz;
+end
+if(~(isempty(zz)))
+    zz_temp = zz_temp+zz;
+end
+for zz = 1:1:answer(1,4)
+    selection_mat(1,zz_temp+zz) = "random";
+    xls_sheet_mat(1,zz_temp+zz) = "random"+zz;
+end
 
 %Initializing number of workers to number of physical cores in the CPU
 myCluster=parcluster('local'); 
 myCluster.NumWorkers=eval('feature(''numcores'')'); 
 parpool(myCluster,eval('feature(''numcores'')'));
+
+%%
+for selection_iteration_run_count = 1:1:length(selection_mat)
+
+temp_count = 0;
+overall_success_rate = zeros(1400,1);
+sd_simulation = zeros(1400,1);
+mean_simulation = zeros(1400,1);
 
 for pop_recursive=10:10:70
     for gen_recursive=10:10:100
@@ -96,7 +150,7 @@ for pop_recursive=10:10:70
                     %%
                     
                     if generation < max_generation
-                        next_parents = selection(y_sorted_breed, pop_sorted_breed, n_pop_withoutmax, num_children, 'breeder');
+                        next_parents = selection(y_sorted_breed, pop_sorted_breed, n_pop_withoutmax, num_children, selection_mat(1,selection_iteration_run_count));
                         
                         % Crossover (reproduction)
                         % num_children = n_pop - (M + N);
@@ -175,13 +229,26 @@ for pop_recursive=10:10:70
     end
 end
 
-rnge=num2str(length(overall_success_rate)+1,'H2:H%d');
-xlswrite ('Accuracy_results',overall_success_rate(:),1,rnge)
+    
+    %% Storing output data to RESULTS_OUTPUT.xlsx file
+    headers = {'Accuracy','Mean', 'Standard deviation'};
+    sheet = selection_iteration_run_count;
+    xlRange = 'A1';
+    xlswrite(filename,headers,sheet,xlRange);
+    
+    
+    cumulative_outputs = [overall_success_rate, mean_simulation, sd_simulation];
+    xlRange = 'A2';
+    xlswrite(filename,cumulative_outputs,sheet,xlRange);
+    
+    e = actxserver('Excel.Application'); % # open Activex server
+    ewb = e.Workbooks.Open(pwd+"\"+filename); % # open file (enter full path!)
+    ewb.Worksheets.Item(sheet).Name = xls_sheet_mat(1,selection_iteration_run_count); % # rename 1st sheet
+    ewb.Save % # save to the same file
+    ewb.Close(false)
+    e.Quit
+    
+    delete(gcp('nocreate')); % Stop parallel workers
+end
 
-rnge2=num2str(length(mean_simulation)+1,'O2:O%d');
-xlswrite ('Accuracy_results',mean_simulation(:),1,rnge2)
-
-rnge3=num2str(length(sd_simulation)+1,'T2:T%d');
-xlswrite ('Accuracy_results',sd_simulation(:),1,rnge3)
-
-disp('over');
+disp('OVER and out');
