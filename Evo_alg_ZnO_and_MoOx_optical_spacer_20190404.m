@@ -6,11 +6,12 @@ format longG;
 
 %% Initializing xlsx file name
 filename = 'RESULTS_OUTPUT.xlsx';
+filename_base = strtok(filename, '.');
 temp=1;
 while(true)
     if(isfile(filename))
-        filename = strtok(filename,'.');
-        filename=filename + string(temp+1) + ".xlsx";
+        filename=filename_base + string(temp+1) + ".xlsx";
+        temp = temp+1;
     else
         break;
     end
