@@ -8,6 +8,12 @@ temp_count = 0;
 overall_success_rate = zeros(1400,1);
 sd_simulation = zeros(1400,1);
 mean_simulation = zeros(1400,1);
+
+%Initializing number of workers to number of physical cores in the CPU
+myCluster=parcluster('local'); 
+myCluster.NumWorkers=eval('feature(''numcores'')'); 
+parpool(myCluster,eval('feature(''numcores'')'));
+
 for pop_recursive=10:10:70
     for gen_recursive=10:10:100
         for mutation_recursive=5:5:100
@@ -157,6 +163,14 @@ for pop_recursive=10:10:70
             overall_success_rate(temp_count,1) = success/repeat_runs*100;
             mean_simulation(temp_count,1) = mean(total_simulation_num);
             sd_simulation(temp_count,1) = std(total_simulation_num,1);
+
+            if(temp_count*100/1400 ~= 100)
+                cprintf('*red',['----------Completion (%%) = ', num2str(round(temp_count*100/1400, 2)),' %% = (',num2str(temp_count),'/',num2str(length(overall_success_rate)),' simulations)----------\n']);
+                cprintf('*blue', 'Simulation running; Please do not shutdown\n\n');
+            else
+                cprintf('*[0.4,0.8,0.5]',['----------Completion (%%) = ', num2str(round(temp_count*100/1400, 2)),' %% = (',num2str(temp_count),'/',num2str(length(overall_success_rate)),' simulations)----------\n']);
+                cprintf('*blue', 'Simulation completed\n\n');
+            end
         end
     end
 end
