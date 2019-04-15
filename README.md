@@ -3,13 +3,15 @@
 * Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 ## Contents
-[Genetic Algorithm](#main-function) • [Results](#results)
+[How to Use](#how-to-use) • [Results](#results)
 
 ## Dependencies
 * *de2bi* and *bi2de* functions:
     * Communication System Toolbox (Matlab 2018b)
     * Communications Toolbox (Matlab 2019a)
     * Add-Ons > Get Add-Ons
+* Parallel running
+    * Parallel Computing Toolbox
 
 ## How to Use
 Run `main.m`
