@@ -1,4 +1,4 @@
-function [Jsc, jsc_dictionary, simulations_required, simulation_num] = jsc_FDTD_ZnO(population, jsc_dictionary, simulations_required, simulation_num)
+function [Jsc, jsc_dictionary_ZnO, simulations_required, simulation_num] = jsc_FDTD_ZnO(population, jsc_dictionary_ZnO, simulations_required, simulation_num)
 format longG;
 %population = [29 30 31 32]; %test population
 
@@ -16,8 +16,8 @@ for (I=1:length(population))
     %% ONLY FOR TESTING -------------- end
     
     %%
-    if (isKey(jsc_dictionary, pop))
-        Jsc_output(1,I) = jsc_dictionary(pop);
+    if (isKey(jsc_dictionary_ZnO, pop))
+        Jsc_output(1,I) = jsc_dictionary_ZnO(pop);
     else
         %Open FDTD session
         FDTD_session=appopen('fdtd');
@@ -71,7 +71,7 @@ for (I=1:length(population))
         
         appevalscript(FDTD_session, 'switchtolayout;');
         
-        jsc_dictionary(pop) = Jsc_output(1,I);
+        jsc_dictionary_ZnO(pop) = Jsc_output(1,I);
         
         %close FDTD session
         appclose(FDTD_session);
