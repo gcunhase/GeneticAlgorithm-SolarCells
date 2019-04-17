@@ -3,7 +3,7 @@
 * Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 ## Contents
-[Genetic Algorithm](#main-function) • [Results](#results)
+[How to Use](#how-to-use) • [Results](#results)
 
 ## Dependencies
 * *de2bi* and *bi2de* functions:
