@@ -84,12 +84,12 @@ for selection_iteration_run_count = 1:1:length(selection_mat)
     %% Storing output data to RESULTS_OUTPUT.xlsx file
     sheet = selection_iteration_run_count;
     
-    xlRange = 'A1';
+    xlRange = 'A2';
     cumulative_outputs = table(overall_success_rate, mean_simulation, sd_simulation, 'VariableNames', {'Accuracy','Mean', 'Standard deviation'});
+    writetable(cumulative_outputs, filename, 'Sheet', sheet, 'Range', xlRange);
 
-    xls_output = table([cumulative_outputs],'VariableNames', xls_sheet_mat(1,selection_iteration_run_count));
-    
-    writetable(xls_output, filename, 'Sheet', sheet, 'Range', xlRange);
+    xlRange = 'B1';
+    writematrix(xls_sheet_mat(1,selection_iteration_run_count), filename, 'Sheet', sheet, 'Range', xlRange);
 
     if ispc
     e = actxserver('Excel.Application'); % # open Activex server
