@@ -10,8 +10,8 @@
     * Communication System Toolbox (Matlab 2018b)
     * Communications Toolbox (Matlab 2019a)
     * Add-Ons > Get Add-Ons
-* Parallel running
-    * Parallel Computing Toolbox
+* Parallel Computing Toolbox
+* Trading Toolbox
 
 ## How to Use
 Run `main.m`
