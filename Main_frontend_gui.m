@@ -80,24 +80,25 @@ for selection_iteration_run_count = 1:1:length(selection_mat)
         run_count = 1;
     end
     end
+    
     %% Storing output data to RESULTS_OUTPUT.xlsx file
-    headers = {'Accuracy','Mean', 'Standard deviation'};
     sheet = selection_iteration_run_count;
     
     xlRange = 'A1';
-    xlswrite(filename,headers,sheet,xlRange);
+    cumulative_outputs = table(overall_success_rate, mean_simulation, sd_simulation, 'VariableNames', {'Accuracy','Mean', 'Standard deviation'});
+
+    xls_output = table([cumulative_outputs],'VariableNames', xls_sheet_mat(1,selection_iteration_run_count));
     
-    
-    cumulative_outputs = [overall_success_rate, mean_simulation, sd_simulation];
-    xlRange = 'A2';
-    xlswrite(filename,cumulative_outputs,sheet,xlRange);
-    
+    writetable(xls_output, filename, 'Sheet', sheet, 'Range', xlRange);
+
+    if ispc
     e = actxserver('Excel.Application'); % # open Activex server
     ewb = e.Workbooks.Open(pwd+"\"+filename); % # open file (enter full path!)
     ewb.Worksheets.Item(sheet).Name = xls_sheet_mat(1,selection_iteration_run_count); % # rename sheet
     ewb.Save % # save to the same file
     ewb.Close(false)
     e.Quit
+    end
     
     delete(gcp('nocreate')); % Stop parallel workers
 end
