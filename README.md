@@ -14,10 +14,11 @@
 * Trading Toolbox
 
 ## How to Use
-Run `main.m`
-> EXPLAIN MORE WHAT IT DOES
+1. Run `Main_frontend_gui.m`
+2. Choose how many runs of each selection to perform
 
 ## Results
+Result is saved in Excel file
 
 | Selection Type | Accuracy |
 | --- | -- |
