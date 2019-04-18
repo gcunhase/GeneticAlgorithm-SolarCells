@@ -85,7 +85,7 @@ for selection_iteration_run_count = 1:1:length(selection_mat)
     sheet = selection_iteration_run_count;
     
     xlRange = 'A2';
-    cumulative_outputs = table(overall_success_rate, mean_simulation, sd_simulation, 'VariableNames', {'Accuracy','Mean', 'Standard deviation'});
+    cumulative_outputs = table(overall_success_rate, mean_simulation, sd_simulation, 'VariableNames', {'Accuracy','Mean', 'Standard_deviation'});
     writetable(cumulative_outputs, filename, 'Sheet', sheet, 'Range', xlRange);
 
     xlRange = 'B1';
