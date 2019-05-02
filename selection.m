@@ -26,10 +26,11 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
                 end
             end
         case 'tournament'
+            n2_pop = round(n_pop/2);
+            next_parents = zeros(1, n2_pop);
             K = 5;
-            next_parents = zeros(1, n_pop/2);
             j = 1;
-            for i=1:n_pop/2
+            for i=1:n2_pop
                 candidates = randperm(n_pop, K);
                 candidates_fitness = y_sorted(candidates);
                 candidates_pop = pop_sorted(candidates);
