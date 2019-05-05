@@ -6,6 +6,7 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
         case 'random'
             next_parents = pop_sorted(randperm(n_pop, n_pop/2));
         case 'roulette'
+            rounded_int_pop = round(n_pop/2);
             % Elements should be between 0 and 1 and sum of all elements should add to 1
             y = y_sorted./sum(y_sorted);
             % Vector from min_val to 1 where v_i += v_{i-1}
@@ -13,11 +14,11 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
                 y(i) = y(i-1) + y(i);
             end
             % Calculate next_parents
-            next_parents = zeros(1, n_pop/2);
+            next_parents = zeros(1, rounded_int_pop);
             rng('shuffle');
-            r = randn(1, n_pop/2);
+            r = randn(1, rounded_int_pop);
             rng('default');
-            for i=1:n_pop/2
+            for i=1:rounded_int_pop
                 for j=1:n_pop
                     if r(i) < y(j)
                         next_parents(i) = pop_sorted(j);
@@ -26,11 +27,15 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
                 end
             end
         case 'tournament'
-            n2_pop = round(n_pop/2);
-            next_parents = zeros(1, n2_pop);
-            K = 5;
+            rounded_int_pop = round(n_pop/2);
+            next_parents = zeros(1, rounded_int_pop);
+            if(length(pop) >= 5)
+                K = 5;
+            else
+                K = length(pop);
+            end
             j = 1;
-            for i=1:n2_pop
+            for i=1:rounded_int_pop
                 candidates = randperm(n_pop, K);
                 candidates_fitness = y_sorted(candidates);
                 candidates_pop = pop_sorted(candidates);
