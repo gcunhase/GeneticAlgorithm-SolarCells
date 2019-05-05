@@ -29,10 +29,10 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
         case 'tournament'
             rounded_int_pop = round(n_pop/2);
             next_parents = zeros(1, rounded_int_pop);
-            if(length(pop) >= 5)
+            if(length(n_pop) >= 5)
                 K = 5;
             else
-                K = length(pop);
+                K = length(n_pop);
             end
             j = 1;
             for i=1:rounded_int_pop
