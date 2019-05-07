@@ -4,7 +4,7 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
     format longG;
     switch type
         case 'random'
-            next_parents = pop_sorted(randperm(n_pop, n_pop/2));
+            next_parents = pop_sorted(randperm(n_pop, round(n_pop/2));
         case 'roulette'
             rounded_int_pop = round(n_pop/2);
             % Elements should be between 0 and 1 and sum of all elements should add to 1
