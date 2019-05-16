@@ -14,11 +14,11 @@
 * Trading Toolbox
 
 ## How to Use
-1. Run `Main_frontend_gui.m`
+1. Run `[MoOx/ZnO]_Main_frontend_gui.m`
 2. Choose how many runs of each selection to perform
 
 ## Results
-Result is saved in Excel file
+Result is saved in Excel file, with number of sheets equivalent to the number of runs in each selection.
 
 | Selection Type | Accuracy |
 | --- | -- |
