@@ -3,7 +3,7 @@
 * Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 ## Contents
-[How to Use](#how-to-use) • [Results](#results)
+[Dependencies](#dependencies) • [How to Use](#how-to-use) • [Results](#results)
 
 ## Dependencies
 * Toolboxes:
