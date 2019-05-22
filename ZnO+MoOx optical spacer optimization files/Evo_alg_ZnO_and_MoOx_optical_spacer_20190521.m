@@ -12,13 +12,13 @@ end_pop_recursive = end_thickness_label - rem(end_thickness_label,10^fix(numel(n
 end_gen_recursive = 100;
 end_mutation_recursive = 100;
 
-start_pop_recursive = 250;
+start_pop_recursive = 500;
 start_gen_recursive = 10;
-start_mutation_recursive = 5;
+start_mutation_recursive = 10;
 
-interval_pop_recursive = 250;
+interval_pop_recursive = 500;
 interval_gen_recursive = 10;
-interval_mutation_recursive = 5;
+interval_mutation_recursive = 10;
 
 total_num_of_simulations = ((end_pop_recursive-start_pop_recursive+interval_pop_recursive)/interval_pop_recursive)*((end_gen_recursive-start_gen_recursive+interval_gen_recursive)/interval_gen_recursive)*((end_mutation_recursive-start_mutation_recursive+interval_mutation_recursive)/interval_mutation_recursive);
 
