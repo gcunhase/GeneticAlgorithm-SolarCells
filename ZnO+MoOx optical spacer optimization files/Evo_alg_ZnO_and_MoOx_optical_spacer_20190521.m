@@ -30,7 +30,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
     for gen_recursive=start_gen_recursive:interval_gen_recursive:end_gen_recursive
         for mutation_recursive=start_mutation_recursive:interval_mutation_recursive:end_mutation_recursive
             % Number of runs
-            repeat_runs = 1000;
+            repeat_runs = 500;
             success = 0;
             temp_count = temp_count + 1;
             tic;
