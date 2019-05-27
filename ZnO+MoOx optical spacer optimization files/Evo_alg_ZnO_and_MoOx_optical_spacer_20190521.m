@@ -8,7 +8,8 @@ end_thickness_label = length(jscKey_ZnO_and_MoOx_temp);
 clear jscKey_ZnO_and_MoOx_temp;
 %%
 
-end_pop_recursive = end_thickness_label - rem(end_thickness_label,10^fix(numel(num2str(end_thickness_label))/2));
+%end_pop_recursive = end_thickness_label - rem(end_thickness_label,10^fix(numel(num2str(end_thickness_label))/2));
+end_pop_recursive = 1500;
 end_gen_recursive = 100;
 end_mutation_recursive = 100;
 
@@ -35,7 +36,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
             temp_count = temp_count + 1;
             tic;
             
-            total_simulation_num = zeros(1,1000);
+            total_simulation_num = zeros(1,repeat_runs);
             
             parfor(z=1:repeat_runs)
                 %                 disp(['RUN no. = ', num2str(z)]);

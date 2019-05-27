@@ -14,7 +14,7 @@ for pop_recursive=5:5:(MoOx_thickness-10)
             temp_count = temp_count + 1;
             tic;
             
-            total_simulation_num = zeros(1,1000);
+            total_simulation_num = zeros(1,repeat_runs);
             
             parfor(z=1:repeat_runs)
                 %                 disp(['RUN no. = ', num2str(z)]);
