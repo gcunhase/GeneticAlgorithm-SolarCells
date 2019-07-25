@@ -5,10 +5,9 @@
 [Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
 
 ## Requirements
-* OS: Windows 7 or Ubuntu 18.04
+* Windows 7 or Ubuntu 18.04
 * Matlab 2018b or 2019a
-    * Toolboxes:
-        * Add-Ons > Get Add-Ons
+    * Toolboxes (Add-Ons > Get Add-Ons)
         * *de2bi* and *bi2de* functions:
             * Communication System Toolbox (Matlab 2018b)
             * Communications Toolbox (Matlab 2019a)
@@ -20,14 +19,14 @@
 ## Solar cell device structure
 Evolutionary algorithm in ZnO and MoOx Optical Spacer
   <p align="left">
-  <img src="./assets/solar_cell_device_structure.png" width="200" alt="Solar cell device structure">
+  <img hspace="10cm" src="./assets/solar_cell_device_structure.png" width="250" alt="Solar cell device structure">
   </p>
 
 ## How to Use
 1. Set up solar cell model:
     * Solar cell FDTD file: [Evo_alg__P3HT-ICBA.fsp](./Evo_alg__P3HT-ICBA.fsp)
     * In the file that starts with `jsc_FDTD_...`, under the comment `%Load simulation file`, change the file directory to the directory you have saved the solar cell FDTD file in.
-2. Run code:
+2. Run code with `Main_frontend_gui.m`:
     * Single layer ZnO: `./'ZnO optical spacer optimization files'/ZnO_Main_frontend_gui.m`
     * Single layer MoOx: `./'MoOx optical spacer optimization files'/MoOx_Main_frontend_gui.m`
     * Multiple layer: `./'ZnO+MoOx optical spacer optimization files'/ZnO_and_MoOx_Main_frontend_gui.m`
