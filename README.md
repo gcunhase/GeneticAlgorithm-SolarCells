@@ -26,7 +26,7 @@ Evolutionary algorithm in ZnO and MoOx Optical Spacer
 1. Run code:
     * Single layer: `./[MoOx or ZnO folder]/[MoOx or ZnO]_Main_frontend_gui.m`
     * Multiple layer: `./[ZnO+MoOx folder]/[ZnO_and_MoOx]_Main_frontend_gui.m`
-2. Choose how many runs of each selection to perform
+2. Choose how many runs of each selection method has to perform. Each section has a repeat counter of 1000 times. This was used for finding the average number of simulations required by the selection method. For real time usage, change the 'repeat_runs' variable value to 1 in the .m file that starts with Evo_alg_...
 
 ## Results
 > Saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
