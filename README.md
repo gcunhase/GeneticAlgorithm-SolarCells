@@ -24,7 +24,7 @@ Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 ## Requirements:
 1. Lumerical, FDTD solutions software + license (you can get 1 month trial version from their website if you have a organization email)
-2. The solar cell FDTD file ([Evo_alg__P3HT-ICBA.fsp(./Evo_alg__P3HT-ICBA.fsp)])
+2. The solar cell FDTD file ([Evo_alg__P3HT-ICBA.fsp](./Evo_alg__P3HT-ICBA.fsp))
 3. In the file that starts with `jsc_FDTD_...`, under the comment `%Load simulation file`, change the file directory to the directory you have saved the solar cell FDTD file in.
 
 ## How to Use
