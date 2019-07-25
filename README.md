@@ -35,18 +35,20 @@ Evolutionary algorithm in ZnO and MoOx Optical Spacer
 
 #### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
-    <img src="./assets/optim_zno.png" height="200" alt="ZnO single" hspace="10cm">
+    <img src="./assets/optim_zno.png" height="200" alt="ZnO single" hspace="15cm">
     <img src="./assets/optim_zno_plot.png" height="200" alt="ZnO single plot">
   </p>
 
 #### MoOx single layer optimization [[excel](./MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
-  <img src="./assets/optim_moox.png" width="400" alt="ZnO single">
+    <img src="./assets/optim_moox.png" height="200" alt="MoOx single" hspace="15cm">
+    <img src="./assets/optim_moox_plot.png" height="200" alt="MoOx single plot" hspace="15cm">
   </p>
 
 #### ZnO+MoOx multi-layer optimization [[excel](./ZnO+MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
-  <img src="./assets/optim_zno_moox.png" width="400" alt="ZnO+MoOx">
+    <img src="./assets/optim_zno_moox.png" height="200" alt="ZnO+MoOx" hspace="15cm">
+    <img src="./assets/optim_zno_moox_plot.png" height="200" alt="ZnO+MoOx" hspace="15cm">
   </p>
 
 ## Acknowledgement
