@@ -31,19 +31,19 @@ Evolutionary algorithm in ZnO and MoOx Optical Spacer
 ## Results
 > Saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
 
-### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
+> Accuracy of 100%: all the 5000 runs converged to the optimal solution.
+
+#### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
   <img src="./assets/optim_zno.png" width="400" alt="ZnO single">
   </p>
 
-  > Accuracy of 100%: all the 5000 runs converged to the optimal solution.
-
-### MoOx single layer optimization [[excel](./MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
+#### MoOx single layer optimization [[excel](./MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
   <img src="./assets/optim_moox.png" width="400" alt="ZnO single">
   </p>
 
-### ZnO+MoOx multi-layer optimization [[excel](./ZnO+MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
+#### ZnO+MoOx multi-layer optimization [[excel](./ZnO+MoOx%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
   <img src="./assets/optim_zno_moox.png" width="400" alt="ZnO+MoOx">
   </p>
