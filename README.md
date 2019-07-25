@@ -19,7 +19,7 @@
 ## Solar cell device structure
 ZnO and MoOx Optical Spacer
   <p align="left">
-  <img hspace="30cm" src="./assets/solar_cell_device_structure.png" width="250" alt="Solar cell device structure">
+  <img hspace="20cm" src="./assets/solar_cell_device_structure.png" width="250" alt="Solar cell device structure">
   </p>
 
 ## How to Use
