@@ -2,7 +2,7 @@
 **Genetic Algorithm** for efficient single and multi-layer **solar cell** thickness optimization
 
 ## Contents
-[Requirements](#dependencies) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
+[Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
 
 ## Requirements
 * OS: Windows 7 or Ubuntu 18.04
