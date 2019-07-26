@@ -1,4 +1,4 @@
-function [Jsc, jsc_dictionary_ZnO_and_MoOx, simulations_required, simulation_num] = jsc_FDTD_ZnO_and_MoOx(population, jsc_dictionary_ZnO_and_MoOx, simulations_required, simulation_num)
+function [Jsc, jsc_dictionary_ZnO_and_MoOx, simulations_required, simulation_num] = jsc_FDTD_ZnO_and_MoOx(population, jsc_dictionary_ZnO_and_MoOx, simulations_required, simulation_num, testing)
 format longG;
 
 %% BRUTE FORCE TESTING ONLY --- start
@@ -28,9 +28,11 @@ for (I=1:length(population))
     pop_MoOx = MoOx_thickness_population(I);
     
     %% ONLY FOR TESTING (used to get simulation numbers when all the results through brute force are known) -------------- start
+    if testing == 2
     if ~(isKey(simulations_required, pop))
         simulations_required(pop) = I;
         simulation_num = simulation_num + 1;
+    end
     end
     %% ONLY FOR TESTING -------------- end
     

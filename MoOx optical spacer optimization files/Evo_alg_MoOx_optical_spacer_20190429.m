@@ -24,7 +24,7 @@ for pop_recursive=5:5:(MoOx_thickness-10)
                 %% GA 1D: Custom code
                 
                 % Decides whether initial population has a random seed or the same (for fidelity)
-                testing = 0;
+                testing = 0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
                 % Provide the MoOx optical spacer thickness limits
                 thickness_min = 0;
                 thickness_max = MoOx_thickness;
@@ -55,20 +55,25 @@ for pop_recursive=5:5:(MoOx_thickness-10)
                 
                 %Hash table or dictionary
                 %Use the JscKey and JscValueSet for testing purpose only
+                %The below values are brute-force Jsc results within this simulation range. It is used when FDTD software is not available and for testing purposes.
+                %simulations_required and jsc_dictionary_MoOx are the same when not in testing mode. This redundancy is known and exists for ease of future testing.
                 %----------------
-                jscKey_MoOx = 0:1:30;
-                jscValueSet_MoOx = [120.0773176,120.8456837,120.860436,120.9146849,120.9701946,121.0270251,121.0851881,121.1446717,121.2054897,116.5022856,116.6620336,116.8399258,119.1426906,118.9432454,118.7839258,118.6024644,118.4148925,118.2272443,118.6293086,118.4874841,118.3768759,118.2389213,118.1160135,117.987314,117.8609946,117.7335726,117.6156901,117.9393804,117.8397217,117.7541059,117.6622976];
-                jsc_dictionary_MoOx = containers.Map(jscKey_MoOx,jscValueSet_MoOx);
+                if testing == 2
+                %jscKey_MoOx = 0:1:30;
+                %jscValueSet_MoOx = [120.0773176,120.8456837,120.860436,120.9146849,120.9701946,121.0270251,121.0851881,121.1446717,121.2054897,116.5022856,116.6620336,116.8399258,119.1426906,118.9432454,118.7839258,118.6024644,118.4148925,118.2272443,118.6293086,118.4874841,118.3768759,118.2389213,118.1160135,117.987314,117.8609946,117.7335726,117.6156901,117.9393804,117.8397217,117.7541059,117.6622976];
+                %jsc_dictionary_MoOx = containers.Map(jscKey_MoOx,jscValueSet_MoOx);
                 %----------------
-                %                 jsc_dictionary = containers.Map('KeyType','int32','ValueType','any');
+                else
+                jsc_dictionary_MoOx = containers.Map('KeyType','int32','ValueType','any');
+                end
                 simulations_required = containers.Map('KeyType','int32', 'ValueType','any');
-                
+
                 % Check criteria
                 while generation <= max_generation
                     %         disp(['Generation: ', num2str(generation), '/', num2str(max_generation)]);
                     % Fitness
                     FitnessFunction = @jsc_FDTD_MoOx;
-                    [y, jsc_dictionary_MoOx, simulations_required, simulation_num] = FitnessFunction(pop, jsc_dictionary_MoOx, simulations_required, simulation_num);
+                    [y, jsc_dictionary_MoOx, simulations_required, simulation_num] = FitnessFunction(pop, jsc_dictionary_MoOx, simulations_required, simulation_num,testing);
                     
                     % Selection: rank population by lowest y score (minimization problem)
                     [y_sorted, index] = sort(y, 'ascend');

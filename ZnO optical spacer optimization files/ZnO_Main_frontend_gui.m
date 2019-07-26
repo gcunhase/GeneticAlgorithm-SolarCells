@@ -4,6 +4,7 @@ clc;
 
 format longG;
 delete(gcp('nocreate'))
+
 %% Initializing xlsx file name
 filename = 'RESULTS_OUTPUT.xlsx';
 filename_base = strtok(filename,'.');

@@ -9,9 +9,11 @@ for (I=1:length(population))
     pop = population(I);
     
     %% ONLY FOR TESTING -------------- start
+    if testing == 2
     if ~(isKey(simulations_required, pop))
         simulations_required(pop) = I;
         simulation_num = simulation_num + 1;
+    end
     end
     %% ONLY FOR TESTING -------------- end
     
