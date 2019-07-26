@@ -2,39 +2,38 @@
 **Genetic Algorithm** for efficient single and multi-layer **solar cell** thickness optimization
 
 ## Contents
-[Dependencies](#dependencies) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
+[Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
 
-## Dependencies
-* Tested on Windows 7 and Ubuntu 18.04
-* Test on Matlab 2018b and 2019a
-* Toolboxes:
-    * Add-Ons > Get Add-Ons
-    * *de2bi* and *bi2de* functions:
-        * Communication System Toolbox (Matlab 2018b)
-        * Communications Toolbox (Matlab 2019a)
-    * Parallel Computing Toolbox
-    * Trading Toolbox
-* `cprintf.m` ([download link](https://www.mathworks.com/matlabcentral/fileexchange/24093-cprintf-display-formatted-colored-text-in-the-command-window))
+## Requirements
+* Windows 7 or Ubuntu 18.04
+* Matlab 2018b or 2019a
+    * Toolboxes (Add-Ons > Get Add-Ons)
+        * *de2bi* and *bi2de* functions:
+            * Communication System Toolbox (Matlab 2018b)
+            * Communications Toolbox (Matlab 2019a)
+        * Parallel Computing Toolbox
+        * Trading Toolbox
+    * `cprintf.m` ([download link](https://www.mathworks.com/matlabcentral/fileexchange/24093-cprintf-display-formatted-colored-text-in-the-command-window))
+* Lumerical, FDTD solutions software + license (you can get 1 month trial version from their website if you have an organization email)
 
 ## Solar cell device structure
-Evolutionary algorithm in ZnO and MoOx Optical Spacer
+ZnO and MoOx Optical Spacer
   <p align="left">
-  <img src="./assets/solar_cell_device_structure.png" width="200" alt="Solar cell device structure">
+  <img hspace="20cm" src="./assets/solar_cell_device_structure.png" width="250" alt="Solar cell device structure">
   </p>
 
-## Requirements:
-1. Lumerical, FDTD solutions software + license (you can get 1 month trial version from their website if you have a organization email)
-2. The solar cell FDTD file ([Evo_alg__P3HT-ICBA.fsp](./Evo_alg__P3HT-ICBA.fsp))
-3. In the file that starts with `jsc_FDTD_...`, under the comment `%Load simulation file`, change the file directory to the directory you have saved the solar cell FDTD file in.
-
 ## How to Use
-1. Run code:
-    * Single layer: `./[MoOx or ZnO folder]/[MoOx or ZnO]_Main_frontend_gui.m`
-    * Multiple layer: `./[ZnO+MoOx folder]/[ZnO_and_MoOx]_Main_frontend_gui.m`
-2. Choose how many runs of each selection method has to perform. Each section has a repeat counter of 1000 times. This was used for finding the average number of simulations required by the selection method. For real time usage, change the 'repeat_runs' variable value to 1 in the .m file that starts with Evo_alg_...
+1. Set up solar cell model:
+    * Solar cell FDTD file: [Evo_alg__P3HT-ICBA.fsp](./Evo_alg__P3HT-ICBA.fsp)
+    * In the file that starts with `jsc_FDTD_...`, under the comment `%Load simulation file`, change the file directory to the directory you have saved the solar cell FDTD file in.
+2. Run code with `Main_frontend_gui.m`:
+    * Single layer ZnO: [`./'ZnO optical spacer optimization files'/ZnO_Main_frontend_gui.m`](./ZnO%20optical%20spacer%20optimization%20files/ZnO_Main_frontend_gui.m)
+    * Single layer MoOx: [`./'MoOx optical spacer optimization files'/MoOx_Main_frontend_gui.m`](./MoOx%20optical%20spacer%20optimization%20files/MoOx_Main_frontend_gui.m)
+    * Multiple layer: [`./'ZnO+MoOx optical spacer optimization files'/ZnO_and_MoOx_Main_frontend_gui.m`](./ZnO+MoOx%20optical%20spacer%20optimization%20files/ZnO_and_MoOx_Main_frontend_gui.m)
+3. Choose how many runs of each selection method has to perform. Each section has a repeat counter of 1000 times. This was used for finding the average number of simulations required by the selection method. For real time usage, change the 'repeat_runs' variable value to 1 in the `.m` file that starts with `Evo_alg_...`
 
 ## Results
-> Saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
+Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
 
 > Accuracy of 100%: all the 5000 runs converged to the optimal solution.
 
