@@ -26,13 +26,12 @@ ZnO and MoOx Optical Spacer
 1. Set up solar cell model:
     * Solar cell FDTD file: [Evo_alg__P3HT-ICBA.fsp](./Evo_alg__P3HT-ICBA.fsp)
     * In the file that starts with `jsc_FDTD_...`, under the comment `%Load simulation file`, change the file directory to the directory you have saved the solar cell FDTD file in.
+    > PS: If the user cannot obtain the Lumerical, FDTD solutions software license, you can still run the code using our in-built Jsc (fitness function) dictionary which was used for testing. To utilize this, set `testing = 2` in the `.m` file that starts with `Evo_alg_...`
 2. Run code with `Main_frontend_gui.m`:
     * Single layer ZnO: [`./'ZnO optical spacer optimization files'/ZnO_Main_frontend_gui.m`](./ZnO%20optical%20spacer%20optimization%20files/ZnO_Main_frontend_gui.m)
     * Single layer MoOx: [`./'MoOx optical spacer optimization files'/MoOx_Main_frontend_gui.m`](./MoOx%20optical%20spacer%20optimization%20files/MoOx_Main_frontend_gui.m)
     * Multiple layer: [`./'ZnO+MoOx optical spacer optimization files'/ZnO_and_MoOx_Main_frontend_gui.m`](./ZnO+MoOx%20optical%20spacer%20optimization%20files/ZnO_and_MoOx_Main_frontend_gui.m)
 3. Choose how many runs of each selection method has to perform. Each section has a repeat counter of 1000 times. This was used for finding the average number of simulations required by the selection method. For real time usage, change the 'repeat_runs' variable value to 1 in the `.m` file that starts with `Evo_alg_...`
-
-PS: If the user cannot obtain the Lumerical, FDTD solutions software license, you can still run the code using our in-built Jsc (fitness function) dictionary which was used for testing. To utilize this, set `testing = 2` in the `.m` file that starts with `Evo_alg_...`
 
 ## Results
 Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
