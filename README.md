@@ -31,6 +31,7 @@ ZnO and MoOx Optical Spacer
     * Single layer MoOx: [`./'MoOx optical spacer optimization files'/MoOx_Main_frontend_gui.m`](./MoOx%20optical%20spacer%20optimization%20files/MoOx_Main_frontend_gui.m)
     * Multiple layer: [`./'ZnO+MoOx optical spacer optimization files'/ZnO_and_MoOx_Main_frontend_gui.m`](./ZnO+MoOx%20optical%20spacer%20optimization%20files/ZnO_and_MoOx_Main_frontend_gui.m)
 3. Choose how many runs of each selection method has to perform. Each section has a repeat counter of 1000 times. This was used for finding the average number of simulations required by the selection method. For real time usage, change the 'repeat_runs' variable value to 1 in the `.m` file that starts with `Evo_alg_...`
+PS: If the user cannot obtain the Lumerical, FDTD solutions software license, you can still run the code using our in-built Jsc (fitness function) dictionary which was used for testing. To utilize this, set `testing = 2` in the `.m` file that starts with `Evo_alg_...`
 
 ## Results
 Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
