@@ -87,7 +87,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
                 jsc_dictionary_ZnO_and_MoOx = containers.Map(jscKey_ZnO_and_MoOx,jscValueSet_ZnO_and_MoOx);
                 %----------------
                 else
-                jsc_dictionary = containers.Map('KeyType','int32','ValueType','any');
+                jsc_dictionary_ZnO_and_MoOx = containers.Map('KeyType','int32','ValueType','any');
                 end
                 simulations_required = containers.Map('KeyType','int32', 'ValueType','any');
                 
