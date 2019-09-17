@@ -1,5 +1,5 @@
 ## About
-Code for paper titled [*"Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell"*](https://arxiv.org/abs/1909.06447).
+Repository for paper titled [*"Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell"*](https://arxiv.org/abs/1909.06447).
 
 ## Contents
 [Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgement)
