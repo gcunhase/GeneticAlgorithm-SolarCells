@@ -63,4 +63,11 @@ Results are saved in Excel files, with number of sheets equivalent to the number
 ## Acknowledgement
 Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
-Include citation once available
+```
+@article{GaSolarCell2019,
+  title={Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell},
+  author={Premkumar Vincent and Gwenaelle Cunha Sergio and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
+  journal={arXiv preprint arXiv:1909.06447},
+  year={2019}
+}
+```
