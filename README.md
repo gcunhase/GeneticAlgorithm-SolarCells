@@ -1,8 +1,8 @@
 ## About
-**Genetic Algorithm** for efficient single and multi-layer **solar cell** thickness optimization
+Code for paper titled [*"Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell"*](https://arxiv.org/abs/1909.06447)
 
 ## Contents
-[Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [Cite](#acknowledgement)
+[Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgement)
 
 ## Requirements
 * Windows 7 or Ubuntu 18.04
@@ -64,7 +64,7 @@ Results are saved in Excel files, with number of sheets equivalent to the number
 Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
 ```
-@article{GaSolarCell2019,
+@article{GASolarCell2019,
   title={Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell},
   author={Premkumar Vincent and Gwenaelle Cunha Sergio and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
   journal={arXiv preprint arXiv:1909.06447},
