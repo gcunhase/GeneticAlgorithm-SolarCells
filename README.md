@@ -1,5 +1,5 @@
 ## About
-Repository for paper titled [*"Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell"*](https://arxiv.org/abs/1909.06447).
+Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells"*](https://arxiv.org/abs/1909.06447).
 
 ## Contents
 [Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgement)
@@ -65,7 +65,7 @@ Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwen
 
 ```
 @misc{VincentAndCunha2019GASolarCell,
-   title={Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cell},
+   title={Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells},
    author={Premkumar Vincent and Gwenaelle Cunha Sergio and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
    year={2019},
    eprint={1909.06447},
