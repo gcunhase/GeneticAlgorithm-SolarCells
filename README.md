@@ -1,16 +1,5 @@
 ## About
 Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells"*](https://arxiv.org/abs/1909.06447).
-```
-@misc{VincentAndCunha2019GASolarCell,
-   title={Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells},
-   author={Premkumar Vincent and Gwenaelle Cunha Sergio and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
-   year={2019},
-   eprint={1909.06447},
-   archivePrefix={arXiv},
-   primaryClass={cs.NE}
-}
-```
-> Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
 ## Contents
 [Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results)
@@ -70,3 +59,17 @@ Results are saved in Excel files, with number of sheets equivalent to the number
     <img src="./assets/optim_zno_moox.png" height="200" alt="ZnO+MoOx" hspace="15cm">
     <img src="./assets/optim_zno_moox_plot.png" height="200" alt="ZnO+MoOx" hspace="15cm">
   </p>
+
+## Acknowledgment
+Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
+
+```
+@misc{VincentAndCunha2019GASolarCell,
+   title={Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells},
+   author={Premkumar Vincent and Gwenaelle Cunha Sergio and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
+   year={2019},
+   eprint={1909.06447},
+   archivePrefix={arXiv},
+   primaryClass={cs.NE}
+}
+```
