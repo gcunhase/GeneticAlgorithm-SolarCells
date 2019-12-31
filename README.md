@@ -66,7 +66,7 @@ Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwen
 ```
 @misc{VincentAndCunha2019GASolarCell,
    title={Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells},
-   author={{Premkumar Vincent, Gwenaelle Cunha Sergio} and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
+   author={{Premkumar Vincent and Gwenaelle Cunha Sergio} and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
    year={2019},
    eprint={1909.06447},
    archivePrefix={arXiv},
