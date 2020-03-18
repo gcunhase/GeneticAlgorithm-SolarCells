@@ -1,4 +1,4 @@
-function [Jsc, jsc_dictionary_ZnO, simulations_required, simulation_num] = jsc_FDTD_ZnO(population, jsc_dictionary_ZnO, simulations_required, simulation_num)
+function [Jsc, jsc_dictionary_ZnO, simulations_required, simulation_num] = jsc_FDTD_ZnO(population, jsc_dictionary_ZnO, simulations_required, simulation_num, testing)
 format longG;
 %population = [29 30 31 32]; %test population
 
