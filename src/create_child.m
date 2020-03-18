@@ -1,18 +1,18 @@
 function [new_child] = create_child(parent1, parent2, float_precision,...
-    num_bits_per_sample, mutation_prob)
+    num_bits_per_sample, mutation_prob, type, k)
 % Creates new child by going through the parents bit by bit and choosing
-% the bit according to whether a random number is smaller or bigger than
-% 0.5
+%   the bit according to whether a random number is smaller or bigger than
+%   0.5
+% type (crossover): uniform, k-point (with k also being provided as parameter)
     
-    % Reproduction
+    if nargin == 5
+        type = 'uniform';
+        k = 1;
+    end
+    % Reproduction (Crossover)
     parent1_bin = de2bi(round(parent1 * 10^float_precision), num_bits_per_sample);
     parent2_bin = de2bi(round(parent2 * 10^float_precision), num_bits_per_sample);
-    new_child_bin = parent1_bin;
-    for i=1:1:length(parent1_bin)
-        if (rand() < 0.5)
-            new_child_bin(i) = parent2_bin(i);
-        end
-    end
+    new_child_bin = crossover(parent1_bin, parent2_bin, type, k);
     
     % Mutation
     if rand() < mutation_prob
