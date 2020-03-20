@@ -5,7 +5,7 @@ overall_success_rate = zeros(1400,1);
 sd_simulation = zeros(1400,1);
 mean_simulation = zeros(1400,1);
 
-for pop_recursive=10:10:70
+for pop_recursive=10:10:80
     for gen_recursive=10:10:100
         for mutation_recursive=5:5:100
             % Number of runs
