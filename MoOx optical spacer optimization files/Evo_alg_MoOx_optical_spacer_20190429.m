@@ -9,7 +9,7 @@ for pop_recursive=5:5:(MoOx_thickness-10)
     for gen_recursive=10:10:100
         for mutation_recursive=5:5:100
             % Number of runs
-            repeat_runs = 1000;
+            repeat_runs = 500; % 1000;
             success = 0;
             temp_count = temp_count + 1;
             tic;
@@ -24,7 +24,7 @@ for pop_recursive=5:5:(MoOx_thickness-10)
                 %% GA 1D: Custom code
                 
                 % Decides whether initial population has a random seed or the same (for fidelity)
-                testing = 0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
+                testing = 2; %0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
                 % Provide the MoOx optical spacer thickness limits
                 thickness_min = 0;
                 thickness_max = MoOx_thickness;
@@ -48,7 +48,7 @@ for pop_recursive=5:5:(MoOx_thickness-10)
                 max_generation = gen_recursive;
                 generation = 0;
                 float_precision = 0;  % 10^float_precision
-                num_bits_per_sample = length(de2bi(thickness_max));
+                num_bits_per_sample = 12 % length(de2bi(thickness_max));
                 num_children = 2;
                 mutation_prob_percentage = mutation_recursive; % Give number in percentage and avoid decimals
                 mutation_prob = mutation_prob_percentage/100;
@@ -59,9 +59,9 @@ for pop_recursive=5:5:(MoOx_thickness-10)
                 %simulations_required and jsc_dictionary_MoOx are the same when not in testing mode. This redundancy is known and exists for ease of future testing.
                 %----------------
                 if testing == 2
-                %jscKey_MoOx = 0:1:30;
-                %jscValueSet_MoOx = [120.0773176,120.8456837,120.860436,120.9146849,120.9701946,121.0270251,121.0851881,121.1446717,121.2054897,116.5022856,116.6620336,116.8399258,119.1426906,118.9432454,118.7839258,118.6024644,118.4148925,118.2272443,118.6293086,118.4874841,118.3768759,118.2389213,118.1160135,117.987314,117.8609946,117.7335726,117.6156901,117.9393804,117.8397217,117.7541059,117.6622976];
-                %jsc_dictionary_MoOx = containers.Map(jscKey_MoOx,jscValueSet_MoOx);
+                jscKey_MoOx = 0:1:30;
+                jscValueSet_MoOx = [120.0773176,120.8456837,120.860436,120.9146849,120.9701946,121.0270251,121.0851881,121.1446717,121.2054897,116.5022856,116.6620336,116.8399258,119.1426906,118.9432454,118.7839258,118.6024644,118.4148925,118.2272443,118.6293086,118.4874841,118.3768759,118.2389213,118.1160135,117.987314,117.8609946,117.7335726,117.6156901,117.9393804,117.8397217,117.7541059,117.6622976];
+                jsc_dictionary_MoOx = containers.Map(jscKey_MoOx,jscValueSet_MoOx);
                 %----------------
                 else
                 jsc_dictionary_MoOx = containers.Map('KeyType','int32','ValueType','any');

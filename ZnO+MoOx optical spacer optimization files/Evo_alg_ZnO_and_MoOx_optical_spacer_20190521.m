@@ -31,7 +31,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
     for gen_recursive=start_gen_recursive:interval_gen_recursive:end_gen_recursive
         for mutation_recursive=start_mutation_recursive:interval_mutation_recursive:end_mutation_recursive
             % Number of runs
-            repeat_runs = 500;
+            repeat_runs = 500; % 500;
             success = 0;
             temp_count = temp_count + 1;
             tic;
@@ -46,7 +46,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
                 %% GA 1D: Custom code
                 
                 % Decides whether initial population has a random seed or the same (for fidelity)
-                testing = 0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
+                testing = 2; %0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not available.
                 % Provide the MoOx optical spacer thickness limits
                 thickness_min = 1;
                 thickness_max = end_thickness_label;
@@ -71,7 +71,7 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
                 max_generation = gen_recursive;
                 generation = 0;
                 float_precision = 0;  % 10^float_precision
-                num_bits_per_sample = length(de2bi(thickness_max));
+                num_bits_per_sample = 12;  %length(de2bi(thickness_max));
                 num_children = 2;
                 mutation_prob_percentage = mutation_recursive; % Give number in percentage and avoid decimals
                 mutation_prob = mutation_prob_percentage/100;

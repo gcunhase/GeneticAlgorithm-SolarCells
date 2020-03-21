@@ -9,7 +9,7 @@ for pop_recursive=10:10:80
     for gen_recursive=10:10:100
         for mutation_recursive=5:5:100
             % Number of runs
-            repeat_runs = 1000;
+            repeat_runs = 500;  %100; % 1000;
             success = 0;
             temp_count = temp_count + 1;
             tic;
@@ -24,7 +24,7 @@ for pop_recursive=10:10:80
                 %% GA 1D: Custom code
                 
                 % Decides whether initial population has a random seed or the same (for fidelity)
-                testing = 0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
+                testing = 2; %0; % testing = 1 is for fixed population instead of random. testing = 2 is for using Jsc (fittness value) database if FDTD software is not avaialble.
                 % Provide the ZnO optical spacer thickness limits
                 thickness_min = 0;
                 thickness_max = 80;
@@ -48,7 +48,7 @@ for pop_recursive=10:10:80
                 max_generation = gen_recursive;
                 generation = 0;
                 float_precision = 0;  % 10^float_precision
-                num_bits_per_sample = length(de2bi(thickness_max));
+                num_bits_per_sample = 12;  %length(de2bi(thickness_max));
                 num_children = 2;
                 mutation_prob_percentage = mutation_recursive; % Give number in percentage and avoid decimals
                 mutation_prob = mutation_prob_percentage/100;

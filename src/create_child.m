@@ -6,8 +6,8 @@ function [new_child] = create_child(parent1, parent2, float_precision,...
 % type (crossover): uniform, k-point (with k also being provided as parameter)
     
     if nargin == 5
-        type = 'uniform';
-        k = 1;
+        type = 'k-point';  % 'uniform'
+        k = 4;
     end
     % Reproduction (Crossover)
     parent1_bin = de2bi(round(parent1 * 10^float_precision), num_bits_per_sample);

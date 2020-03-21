@@ -6,7 +6,7 @@ clc;
 format longG;
 
 %% Initializing xlsx file name
-filename = 'RESULTS_OUTPUT.xlsx';
+filename = 'RESULTS/RESULTS_OUTPUT_MoOx_Roulette_k4_b12_runs500.xlsx';
 filename_base = strtok(filename,'.');
 filename = filename_base + "_" + string(datetime('today')) + ".xlsx";
 temp=1;
