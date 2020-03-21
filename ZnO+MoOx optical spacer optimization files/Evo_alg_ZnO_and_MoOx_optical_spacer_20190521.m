@@ -102,6 +102,11 @@ for pop_recursive=start_pop_recursive:interval_pop_recursive:end_pop_recursive %
                     [y_sorted, index] = sort(y, 'ascend');
                     pop_sorted = pop(index);
                     
+                    % Adding the best speciment to the selection population
+                    % This is done since the best speciment (pop_sorted(1)) will be kept aside as a backup
+                    pop_sorted(end) = pop_sorted(1);
+                    pop_sorted = circshift(pop_sorted, [2,1]);
+
                     %%
                     pop_sorted_breed = pop_sorted(2:length(pop_sorted));
                     y_sorted_breed = y_sorted(2:length(y_sorted));
