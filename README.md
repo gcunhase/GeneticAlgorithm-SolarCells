@@ -1,6 +1,10 @@
 ## About
 Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells"*](https://arxiv.org/abs/1909.06447).
 
+  <p align="center">
+  <img src="./assets/graphical_abstract.png" height="150" alt="Graphical Abstract">
+  </p>
+
 ## Contents
 [Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgment)
 
