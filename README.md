@@ -40,7 +40,7 @@ ZnO and MoOx Optical Spacer
 ## Results
 * Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
 * Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
-* Obtain performance graph: [evaluation](./evaluation)
+* Obtain performance graph: [evaluation scripts](./evaluation)
 
 #### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
