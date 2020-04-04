@@ -12,6 +12,6 @@
     * The first data should be from row 3.
     * **Note**: This has already been done in the provided Excel files.
 * Run: `evaluation/roulette_graphing_code.m`
-    * Change `primary_path` variable with the path of Excel file
-    * Change `filename` variable with the name of the Excel file
+    * `primary_path`: variable with the path of Excel file
+    * `filename`: variable with the name of the Excel file
 
