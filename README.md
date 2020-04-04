@@ -38,9 +38,9 @@ ZnO and MoOx Optical Spacer
     * For real time usage, change the 'repeat_runs' variable value to 1 in the `.m` file that starts with `Evo_alg_...`
 
 ## Results
-Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
-
-> Accuracy of 100%: all the 5000 runs converged to the optimal solution.
+* Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
+* Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
+* Obtain performance graph: [evaluation](./evaluation)
 
 #### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
