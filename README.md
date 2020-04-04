@@ -6,7 +6,7 @@ Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alter
   </p>
 
 ## Contents
-[Requirements](#requirements) • [Solar Cell](#solar-cell-device-structure) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgment)
+[Requirements](#requirements) • [How to Use](#how-to-use) • [Results](#results) • [How to Cite](#acknowledgment)
 
 ## Requirements
 * Windows 7 or Ubuntu 18.04
@@ -19,12 +19,6 @@ Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alter
         * Trading Toolbox
     * `cprintf.m` ([download link](https://www.mathworks.com/matlabcentral/fileexchange/24093-cprintf-display-formatted-colored-text-in-the-command-window))
 * Lumerical, FDTD solutions software + license (you can get 1 month trial version from their website if you have an organization email)
-
-## Solar cell device structure
-ZnO and MoOx Optical Spacer
-  <p align="left">
-  <img hspace="20cm" src="./assets/solar_cell_device_structure.png" width="250" alt="Solar cell device structure">
-  </p>
 
 ## How to Use
 1. Set up solar cell model
@@ -43,8 +37,8 @@ ZnO and MoOx Optical Spacer
 
 ## Results
 * Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
-* Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
 * Obtain performance graph: [evaluation scripts](./evaluation)
+> Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
 
 #### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
