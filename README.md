@@ -60,6 +60,11 @@ ZnO and MoOx Optical Spacer
     <img src="./assets/optim_zno_moox_plot.png" height="200" alt="ZnO+MoOx" hspace="15cm">
   </p>
 
+#### Crossover methods: Uniform vs *k*-point
+  <p align="left">
+    <img src="./assets/crossover_comparisons.png" height="150" alt="Crossover methods">
+  </p>
+
 ## Acknowledgment
 Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
