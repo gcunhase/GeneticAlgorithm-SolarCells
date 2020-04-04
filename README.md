@@ -2,7 +2,7 @@
 Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells"*](https://arxiv.org/abs/1909.06447).
 
   <p align="center">
-  <img src="./assets/graphical_abstract.jpg" height="150" alt="Graphical Abstract">
+  <img src="./assets/graphical_abstract.jpg" height="200" alt="Graphical Abstract">
   </p>
 
 ## Contents
@@ -38,7 +38,7 @@ Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alter
 ## Results
 * Results are saved in Excel files, with number of sheets equivalent to the number of runs in each selection.
 * Obtain performance graph: [evaluation scripts](./evaluation)
-> Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
+   > Accuracy of 100% (meaning): all the 5000 runs converged to the optimal solution.
 
 #### ZnO single layer optimization [[excel](./ZnO%20optical%20spacer%20optimization%20files/RESULTS)]
   <p align="left">
