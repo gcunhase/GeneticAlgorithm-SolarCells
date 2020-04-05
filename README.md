@@ -1,5 +1,5 @@
 ## About
-Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells"*](https://arxiv.org/abs/1909.06447).
+Repository for paper titled *"Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells"* [[OpenAccess](https://www.mdpi.com/1996-1073/13/7/1726)]
 
   <p align="center">
   <img src="./assets/graphical_abstract.jpg" height="200" alt="Graphical Abstract">
@@ -67,12 +67,14 @@ Repository for paper titled [*"Employing Genetic Algorithm as an Efficient Alter
 Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwenaelle Cunha Sergio](https://github.com/gcunhase) had equal contribution
 
 ```
-@misc{VincentAndCunha2019GASolarCell,
-   title={Employing Genetic Algorithm as an Efficient Alternative to Parameter Sweep Based Multi-Layer Thickness Optimization in Solar Cells},
-   author={{Premkumar Vincent and Gwenaelle Cunha Sergio} and Jaewon Jang and In Man Kang and Philippe Lang and Hyeok Kim and Jaehoon Park and Muhan Choi and Minho Lee and Jin-Hyuk Bae},
-   year={2019},
-   eprint={1909.06447},
-   archivePrefix={arXiv},
-   primaryClass={cs.NE}
+@article{VincentAndCunha2020GASolarCell,
+   title={Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells},
+   author={{Sergio, G. C., and Vincent, P.} and Jaewon Jang and In Man Kang and Jaehoon Park and Hyeok Kim and Minho Lee and Jin-Hyuk Bae},
+   year={2020},
+   journal={Energies},
+   volume={13},
+   issue={7},
+   pages={1--14},
+   doi={10.3390/en13071726},
 }
 ```
