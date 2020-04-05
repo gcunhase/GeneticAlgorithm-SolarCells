@@ -80,3 +80,5 @@ Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwen
    ISSN={1996-1073},
 }
 ```
+
+Contact: `2014600014@knu.ac.kr` and `gwena.cs@gmail.com`
