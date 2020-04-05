@@ -69,7 +69,7 @@ Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwen
 ```
 @article{VincentAndCunha2020GASolarCell,
    title={Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells},
-   author={{Sergio, G. C., and Vincent, P.} and Jaewon Jang and In Man Kang and Jaehoon Park and Hyeok Kim and Minho Lee and Jin-Hyuk Bae},
+   author={{Vincent, P. and Sergio, G. C.} and Jaewon Jang and In Man Kang and Jaehoon Park and Hyeok Kim and Minho Lee and Jin-Hyuk Bae},
    year={2020},
    journal={Energies},
    volume={13},
