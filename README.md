@@ -1,5 +1,5 @@
 ## About
-Repository for paper titled [*"Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells"*](https://www.mdpi.com/1996-1073/13/7/1726)]
+Repository for paper titled [*"Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells"*](https://www.mdpi.com/1996-1073/13/7/1726)
 
   <p align="center">
   <img src="./assets/graphical_abstract.jpg" height="200" alt="Graphical Abstract">
