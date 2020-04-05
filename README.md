@@ -75,8 +75,8 @@ Co-First Authors: [Premkumar Vincent](https://github.com/vinpremkumar) and [Gwen
    volume={13},
    issue={7},
    pages={1--14},
-   doi={10.3390/en13071726},
    article-number={1726},
+   DOI={10.3390/en13071726},
    ISSN={1996-1073},
 }
 ```
