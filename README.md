@@ -1,3 +1,11 @@
+
+# *"Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells"*    
+
+<div align="center"> 
+[![Paper](https://img.shields.io/badge/Energies-2020-red)](https://www.mdpi.com/1996-1073/13/7/1726)
+[![Paper](https://img.shields.io/badge/arxiv-1909.06447-orange)](https://arxiv.org/abs/1909.06447)
+</div>
+
 ## About
 Repository for paper titled [*"Application of Genetic Algorithm for More Efficient Multi-layer Thickness Optimization in Solar Cells"*](https://www.mdpi.com/1996-1073/13/7/1726).
 
