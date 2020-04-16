@@ -2,7 +2,8 @@
 <div align="center"> 
 
 [![Paper](https://img.shields.io/badge/Energies-2020-red.svg)](https://www.mdpi.com/1996-1073/13/7/1726)
-[![Paper](https://img.shields.io/badge/arxiv-1909.06447-orange.svg)](https://arxiv.org/abs/1909.06447)
+[![Paper](https://img.shields.io/badge/arxiv-1909.06447-red.svg)](https://arxiv.org/abs/1909.06447)
+[![Conference](https://img.shields.io/badge/NUSOD-2019-blue.svg)](https://www.nusod.org/2019/nusod19paper45.pdf)
 
 </div>
 
